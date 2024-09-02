@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "Cartas.h"
 #include "Tablero.h"
+#include "string.h"
 
 
 Mano cartas;
@@ -50,8 +51,21 @@ void mostrarTablero(){
 }
 
 int main(int argc, char const *argv[]){
-    int tamaño=11;
+    int tamaño;
     cap= &tamaño;
+    int dificultad;
+    
+    printf("Que modalidad quieres jugar?: 1->Facil \n 2->Medio \n 3->Dificil");
+    scanf("%d", &dificultad);
+    if (dificultad==1){
+        tamaño=11;
+    }
+    else if (dificultad==2){
+        tamaño=17;
+    }
+    else{
+        tamaño=21;
+    }
     inicializarTablero(tamaño);
     mostrarTablero();
     inicializarMazo();

@@ -16,5 +16,9 @@ int main(){
     mostrar();
     a=5;
     mostrar();
+    int numero;
+    printf("ingrese un numero: ");
+    scanf("%d", &numero);
+    printf("%d", numero);
     return 0;
 }
